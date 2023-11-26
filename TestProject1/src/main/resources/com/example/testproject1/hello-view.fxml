@@ -1,16 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.testproject1.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="700.0" style="-fx-background-color: #2e3348;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.testproject1.HelloController">
+   <children>
+      <AnchorPane layoutY="100.0" prefHeight="300.0" prefWidth="700.0" style="-fx-background-color: #fafafa;">
+         <children>
+            <TextField fx:id="login_field" layoutX="181.0" layoutY="88.0" prefHeight="25.0" prefWidth="337.0" promptText="Логин" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <PasswordField fx:id="password_field" layoutX="181.0" layoutY="150.0" prefHeight="25.0" prefWidth="337.0" promptText="Пароль" style="-fx-background-color: #fafafa; -fx-border-color: silver; -fx-border-radius: 5px;">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </PasswordField>
+            <Label layoutX="244.0" layoutY="14.0" text="Авторизация" textFill="#8a8a8a">
+               <font>
+                  <Font name="Lobster Regular" size="37.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnSignIn" layoutX="293.0" layoutY="208.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="121.0" style="-fx-background-color: #2e3348;" text="Войти" textFill="WHITE">
+               <font>
+                  <Font name="Lobster Regular" size="28.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Label layoutX="263.0" layoutY="14.0" text="My App" textFill="WHITE">
+         <font>
+            <Font name="Lobster Regular" size="56.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnSignUp" layoutX="532.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #f39c63;" text="Зарегистрироваться" textFill="WHITE">
+         <font>
+            <Font name="Lobster Regular" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
